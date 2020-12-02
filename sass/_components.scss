@@ -1,0 +1,131 @@
+
+
+//logo
+.logo{
+    height:3.25rem;
+    margin-left:2rem;
+}
+
+//Search
+.search{
+
+    flex:0 0 40%;
+
+    //set as the container for the whole search block
+    display: flex;
+    align-items: center;  //set cross axis Y
+    justify-content: center; //set main axis X
+
+
+    &__input{
+        font-family: inherit;
+        font-size: inherit;
+        color: inherit;
+        background-color: var(--grey-light-2);
+        border:none;
+        padding:1rem 2rem;
+        border-radius: 100px;
+        width:90%;
+        transition:all 0.2s;
+        margin-right:-3.5rem; //to move the botton to the right next to the input 
+
+        &:focus{
+            outline: none;
+            width:100%;
+            background-color: var(--grey-light-3);
+        }
+
+        &::webkit-input-placeholder{
+            font-weight: 100;
+            color: var(--grey-light-3);
+        }
+    }
+
+    &__input:focus + &__button{
+        background-color: var(--grey-light-3);
+        }
+    
+
+    &__button{
+        border:none;
+        background-color: var(--grey-light-2);
+
+        &:focus{
+            outline:none;
+        }
+        &:active{
+            transform: translateY(2px);
+        }
+
+    }
+
+    &__icon{
+        height:2rem;
+        width: 2rem;
+        fill: var(--grey-dark-3);  //change the svg icon color 
+    }
+
+}
+
+// User navigation
+.user-nav{  
+    align-self: stretch; //correspond to the header section align-items: center
+
+    display:flex;
+    align-items: center;
+      
+
+    &>*{
+        padding: 0 2rem;
+        cursor: pointer;
+        height: 100%;
+        display:flex;
+        align-items: center;
+       
+
+    }
+
+    &>*:hover {
+        background-color: var(--grey-light-2);
+        height: 100%;
+    }
+
+    &__icon-box {
+        position: relative;
+    }
+
+    &__icon{
+        height:2.25rem;
+        width:2.25rem;
+        
+    }
+
+    &__notification {
+        font-size:.8rem;
+        height: 1.5rem;
+        width: 1.5rem;
+        border-radius: 50%;
+        background-color:var(--color-Primary);
+        color:#fff;
+
+        position: absolute;
+        top:1.3rem;
+        left:3.5rem;
+
+        display: flex;
+        align-content: center;
+        justify-content:center;
+
+    }
+   
+    &__user-photo {
+        height: 3.25rem;
+        border-radius: 50%;
+        fill: var(--grey-dark-2);
+        margin-right:1rem;
+    }
+
+    &__user-name{
+
+    }
+}

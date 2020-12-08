@@ -58,6 +58,12 @@ body {
   margin: 8rem auto;
   background-color: var(--grey-light-2);
   box-shadow: var(--shadow-dark); }
+  @media only screen and (max-width: 1200px) {
+    .container {
+      width: 100%;
+      max-width: 100%;
+      margin-top: 0;
+      height: 100%; } }
 
 .header {
   height: 7rem;
@@ -71,6 +77,9 @@ body {
 
 .content {
   display: flex; }
+  @media only screen and (max-width: 900px) {
+    .content {
+      flex-direction: column; } }
 
 .sidebar {
   flex: 0 0 18%;
@@ -78,6 +87,9 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: space-between; }
+  @media only screen and (max-width: 900px) {
+    .sidebar {
+      flex-direction: row; } }
 
 .hotel_view {
   flex: 1; }
@@ -88,6 +100,12 @@ body {
   background-color: var(--grey-light-1);
   padding: 4.5rem;
   font-size: 1.4rem; }
+  @media only screen and (max-width: 700px) {
+    .detail {
+      padding: 2.5rem; } }
+  @media only screen and (max-width: 650px) {
+    .detail {
+      flex-direction: column; } }
 
 .description {
   background-color: #fff;
@@ -95,6 +113,10 @@ body {
   flex: 0 0 60%;
   margin-right: 4.5rem;
   padding: 3rem; }
+  @media only screen and (max-width: 700px) {
+    .description {
+      padding: 2.5rem;
+      margin-right: 2rem; } }
 
 .user__reviews {
   flex: 1;
@@ -112,6 +134,11 @@ body {
   display: flex;
   align-items: center;
   justify-content: center; }
+  @media only screen and (max-width: 500px) {
+    .search {
+      flex-wrap: wrap;
+      order: 1;
+      flex: 1; } }
   .search__input {
     font-family: inherit;
     font-size: inherit;
@@ -212,17 +239,33 @@ body {
     align-items: center;
     position: relative;
     z-index: 10; }
+    @media only screen and (max-width: 900px) {
+      .side-nav__link:link, .side-nav__link:visited {
+        flex: 1; } }
+    @media only screen and (max-width: 600px) {
+      .side-nav__link:link, .side-nav__link:visited {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center; } }
   .side-nav__icon {
     width: 1.75rem;
     height: 1.75rem;
     margin-right: 2rem;
     fill: var(--grey-light-1); }
+  @media only screen and (max-width: 900px) {
+    .side-nav {
+      display: flex;
+      flex-direction: row;
+      margin: 0; } }
 
 .legal {
   font-size: 1.2rem;
   color: var(--grey-light-4);
   text-align: center;
   padding: 2.5rem; }
+  @media only screen and (max-width: 900px) {
+    .legal {
+      display: none; } }
 
 .gallery {
   display: flex; }
@@ -246,13 +289,24 @@ body {
     letter-spacing: 1px;
     text-transform: uppercase;
     padding: 1.5rem 3rem; }
+    @media only screen and (max-width: 650px) {
+      .overview__heading {
+        padding: 0.5rem 1rem;
+        font-size: 1.75rem; } }
   .overview__stars {
     margin-right: auto;
     display: flex; }
+    @media only screen and (max-width: 650px) {
+      .overview__stars {
+        flex: 1; } }
   .overview__icon-star, .overview__icon-location {
     width: 1.75rem;
     height: 1.75rem;
     fill: var(--color-Primary); }
+    @media only screen and (max-width: 650px) {
+      .overview__icon-star, .overview__icon-location {
+        width: 1.25rem;
+        height: 1.25rem; } }
   .overview__location {
     display: flex;
     font-size: 1.2rem;
@@ -270,9 +324,15 @@ body {
   .overview__rating-average {
     font-size: 2.25rem;
     font-weight: 300; }
+    @media only screen and (max-width: 650px) {
+      .overview__rating-average {
+        font-size: 1.75rem; } }
   .overview__rating-content {
     font-size: 0.8rem;
     text-transform: uppercase; }
+    @media only screen and (max-width: 650px) {
+      .overview__rating-content {
+        font-size: 0.6rem; } }
 
 .btn-inline {
   border: none;
@@ -324,6 +384,10 @@ body {
       mask-image: url(../img/chevron-thin-right.svg);
       -webkit-mask-size: cover;
       mask-size: cover; }
+    @media only screen and (max-width: 1000px) {
+      .list__item {
+        flex: 0 0 100%;
+        align-items: center; } }
 
 .recommend {
   font-size: 1.3rem;
@@ -347,6 +411,10 @@ body {
   padding: 3rem;
   margin-bottom: 3.5rem;
   position: relative; }
+  @media only screen and (max-width: 700px) {
+    .review {
+      padding: 1.5rem;
+      margin-bottom: 1.5rem; } }
   .review__text {
     margin-bottom: 2rem;
     z-index: 5;

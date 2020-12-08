@@ -74,6 +74,12 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center; }
+  @media only screen and (max-width: 500px) {
+    .header {
+      flex-wrap: wrap;
+      flex: 0,0,100%;
+      align-content: space-around;
+      height: 12rem; } }
 
 .content {
   display: flex; }
@@ -90,6 +96,9 @@ body {
   @media only screen and (max-width: 900px) {
     .sidebar {
       flex-direction: row; } }
+  @media only screen and (max-width: 500px) {
+    .sidebar {
+      flex-wrap: wrap; } }
 
 .hotel_view {
   flex: 1; }
@@ -117,6 +126,10 @@ body {
     .description {
       padding: 2.5rem;
       margin-right: 2rem; } }
+  @media only screen and (max-width: 650px) {
+    .description {
+      margin-right: 0;
+      margin-bottom: 2rem; } }
 
 .user__reviews {
   flex: 1;
@@ -136,9 +149,8 @@ body {
   justify-content: center; }
   @media only screen and (max-width: 500px) {
     .search {
-      flex-wrap: wrap;
       order: 1;
-      flex: 1; } }
+      flex: 0,0,100%; } }
   .search__input {
     font-family: inherit;
     font-size: inherit;
@@ -212,6 +224,15 @@ body {
   font-size: 1.4rem;
   list-style: none;
   margin-top: 3.5rem; }
+  @media only screen and (max-width: 900px) {
+    .side-nav {
+      flex: 1 1 100%;
+      margin-right: auto; } }
+  @media only screen and (max-width: 500px) {
+    .side-nav {
+      flex-wrap: wrap;
+      align-content: flex-start;
+      height: 15rem; } }
   .side-nav__item {
     position: relative; }
   .side-nav__item::before {
@@ -264,6 +285,9 @@ body {
   text-align: center;
   padding: 2.5rem; }
   @media only screen and (max-width: 900px) {
+    .legal {
+      display: none; } }
+  @media only screen and (max-width: 500px) {
     .legal {
       display: none; } }
 
@@ -319,7 +343,7 @@ body {
     align-items: center;
     background-color: var(--color-Primary);
     color: #fff;
-    margin-left: 3rem;
+    margin-left: 2rem;
     padding: 0 2.25rem; }
   .overview__rating-average {
     font-size: 2.25rem;
@@ -415,10 +439,17 @@ body {
     .review {
       padding: 1.5rem;
       margin-bottom: 1.5rem; } }
+  @media only screen and (max-width: 650px) {
+    .review {
+      margin-top: 1rem;
+      padding: 0; } }
   .review__text {
     margin-bottom: 2rem;
     z-index: 5;
     position: relative; }
+    @media only screen and (max-width: 650px) {
+      .review__text {
+        padding: 1rem; } }
   .review__user {
     display: flex;
     align-items: center; }
@@ -441,6 +472,10 @@ body {
     color: var(--color-Primary);
     font-size: 2.2rem;
     font-weight: 300; }
+    @media only screen and (max-width: 650px) {
+      .review__rating {
+        padding: 0.5rem 1rem;
+        font-size: 1.75rem; } }
   .review::before {
     content: "\201C";
     position: absolute;

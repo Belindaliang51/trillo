@@ -26,6 +26,14 @@
     display:flex;
     justify-content: space-between;
     align-items: center;
+
+    @media only screen and (max-width:500px) {
+        flex-wrap: wrap;
+        flex:0,0,100%;
+        align-content: space-around;
+        height: 12rem;
+
+    }
 }
 
 .content{
@@ -48,6 +56,10 @@
     @media only screen and (max-width:900px){
         flex-direction:row;
     }
+
+   @media only screen and (max-width:500px) {
+       flex-wrap: wrap;
+   }
 
 }
 
@@ -81,6 +93,10 @@
     @media only screen and (max-width: 700px) {
         padding: 2.5rem;
         margin-right: 2rem;
+    }
+    @media only screen and (max-width: 650px) {
+        margin-right: 0;
+        margin-bottom: 2rem;
     }
     
 }
